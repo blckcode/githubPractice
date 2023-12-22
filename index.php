@@ -72,6 +72,6 @@
         <a href="#" class="btn" >check out now</a>
     </div>
   </header>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
