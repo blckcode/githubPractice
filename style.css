@@ -41,6 +41,10 @@ body{
     background: #010103;
 }
 
+section{
+    padding:2rem 7%;
+}
+
 .btn{
     margin-top: 1rem;
     display: inline-block;
@@ -68,7 +72,7 @@ body{
 }
 
 .header .logo img{
-    height: 6rem;
+    height: 5rem;
 }
 
 .header .navbar a{
@@ -143,11 +147,11 @@ body{
     padding: 0 1.5rem;
 }
 
-.header .cart-items-container .active{
+.header .cart-items-container.active{
     right: 0;
 }
 
-.header .cart-items-container .cart-item{
+.header .cart-items-container.cart-item{
     position: relative;
     margin: 2rem 0;
     display: flex;
@@ -187,6 +191,36 @@ body{
     text-align: center;
 }
 
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(assets/bg3.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 5vh;
+}
+
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    line-height: 1.2;
+    padding: 1rem 0;
+    color: #eee;
+}
+
+
+
 
 
 @media(max-width:991px){
@@ -196,19 +230,26 @@ body{
     .header{
         padding: 1.5rem 2rem;
     }
+    section{
+        padding:2rem;
+    }
 }
 
 @media(max-width:768px){
     #menu-btn{
-        display: none;
+        display: inline-block;
     }
     
     .header .navbar{
         position: absolute;
-        top: 100%; right: 0;
+        top: 100%; right: -100%;
         background: #fff;
         width: 30rem;
         height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+        right: 0;
     }
 
     .header .navbar a{
